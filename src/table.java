@@ -38,6 +38,10 @@ public class Table {
         JPanel panel = new JPanel();
         panel.setBackground(new Color(18, 30, 49));
 
+        JButton insertButton = new JButton("Insert");
+        panel.add(insertButton);
+
+
         // Create a label with white text for table name
         JLabel tableLabel = new JLabel("Enter Table Name:");
         tableLabel.setForeground(Color.WHITE);
@@ -89,7 +93,9 @@ public class Table {
                 searchDatabase(tableName, columnName, tableModel);
             }
         });
+
     }
+
 
     private static void searchDatabase(String tableName, String columnName, DefaultTableModel tableModel) {
         try {
@@ -122,4 +128,5 @@ public class Table {
             e.printStackTrace();
         }
     }
+
 }
